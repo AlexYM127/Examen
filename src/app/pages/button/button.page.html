@@ -1,27 +1,44 @@
-<app-header titulo="Boton"></app-header>
+<app-header titulo="Input"></app-header>
 
 <ion-content>
-  <ion-header >
-    <ion-toolbar>
-      
-      <div class="titulo" class="ion-text-center">
-      <b class="ion-padding">Selecciona tu color favorito: </b>
-      </div>
-      <div class="Colors" class="ion-text-center">
-      <ion-button color="primary">Azul</ion-button>
-      <ion-button color="secondary">Celeste</ion-button>
-      <ion-button color="tertiary">Violeta</ion-button>
-      </div>
-      <div class="Colors1" class="ion-padding" class="ion-text-center">
-      <ion-button color="success">Verde</ion-button>
-      <ion-button color="warning">Amarillo</ion-button>
-      <ion-button color="danger">Rojo</ion-button>
-      </div>
-      <div class="Colors2" class="ion-padding" class="ion-text-center">
-      <ion-button color="light">Negro</ion-button>
-      <ion-button color="medium">Plomo</ion-button>
-      <ion-button color="dark">Blanco</ion-button>
-      </div>
-    </ion-toolbar>
-  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+      <ion-avatar slot="start">
+        <img alt="Usuario"
+          src="https://cdn-icons-png.flaticon.com/128/2550/2550260.png" />
+      </ion-avatar>
+        <ion-input label="Registro de usuario"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Nombres completos" placeholder="Introuce tu nombre"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Correo electronico:</ion-label>
+        <ion-input type="email" placeholder="Correo electronico" name="email" [(ngModel)]="usuario.email"
+          pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zAZ]{2,5})$" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Direccion:" value="6 de marzo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Una vez registrado," value="puedes iniciar sesion." [readonly]="true"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Contraseña: </ion-label>
+        <ion-input type="password" name="password" [(ngModel)]="usuario.password" required placeholder="Contraseña">
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-input label="Bienvenido" value="" [disabled]="true"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
 </ion-content>

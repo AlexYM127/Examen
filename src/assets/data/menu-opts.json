@@ -15,8 +15,9 @@
 "redirectTo": "/avatar"
 },
 {
-"icon": "ellipse-outline",
-"name": "button",
+"icon": "person-circle-outline",
+"name": "Input",
 "redirectTo": "/button"
 }
+
 ]
